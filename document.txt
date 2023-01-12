@@ -1,0 +1,39 @@
+1. setting up npm and its environment
+
+2. check version using npm init - by default this will create a package.json file!
+
+3. Look for installing relevant packages (traditionally starting with express.js)
+
+4. Intsall express.js using " npm install --save express "
+
+5. this will update the package.json dependencies and use the below demo code to run the sample web browser!
+
+/*
+    const express = require("express")
+    var app = express()
+    app.get("/",function(request,response){
+    response.send("Hello World!")
+    })
+    app.listen(2000, function () {
+    console.log("Started application on port %d", 2000)
+    });
+*/
+
+6. For the lung model we require WASM, ONNXRuntime and tensorflow.js
+
+7. npm install onnxruntime-web --> imports onnxruntime-web !
+
+8. npm install nifti-reader-min && import nifti-reader-min js 
+
+9. npm install tensorflow/tfjs && const tf = require('@tensorflow/tfjs');
+
+10. npm install @tensorflow/tfjs-backend-wasm
+
+    NOTE:
+    The library expects the WASM binary to be relative to the main JS file. If you’re using a bundler such as parcel or webpack, you may need to manually indicate the location of the WASM binary with our setWasmPath helper:
+    import {setWasmPath} from '@tensorflow/tfjs-backend-wasm';
+    setWasmPath(yourCustomPath);
+    tf.setBackend('wasm').then(() => {...});
+
+11. Handle file select using multer package.
+
