@@ -185,8 +185,8 @@ function drawCanvas(plane, canvas, canvas2, canvas_CT, canvas_Label, slice, nift
         end2=dim2;
     }
 
-    for (let i2 =0; i2<end1; i2++) {
-        for (let j2 = 0; j2 < end2; j2 ++) {
+    for (let i2=end1-1; i2>=0; i2--) {
+        for (let j2 = end2-1; j2 >= 0; j2 --) {
             let value;
             let valueCT;
             if (plane=="Sagittal" || plane=="Coronal"){
